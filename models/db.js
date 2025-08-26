@@ -1,4 +1,4 @@
-const { Sequelize } = require("sequelize");
+import { Sequelize } from 'sequelize';
 
 const sequelize = new Sequelize(
     "cadastro",
@@ -16,7 +16,4 @@ sequelize.authenticate().then(() => {
     console.log("ERRO: ", erro);
 });
 
-module.exports = {
-    Sequelize: Sequelize,
-    sequelize: sequelize
-}
+export default {sequelize, Sequelize};
